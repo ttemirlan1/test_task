@@ -42,3 +42,34 @@ function findMissingNumbers(arr, n, intervalSize = 10000) {
   console.log(missingNumbers); // Выводит [2, 3]
   //time complexity is O(n) but faster than plain searching
 
+//below i was trying to do with binary search but didnt have enough time 
+//time complexity would be O(log n)
+
+// function findMissingNumbers(arr, low, high, offset) {
+//     if (low > high) {
+//       return [];
+//     }
+  
+//     const mid = Math.floor((low + high) / 2);
+  
+//     if (arr[mid] - mid !== offset) {
+//       // Восстанавливаем пропущенное число, используя разницу между ожидаемым и фактическим значением
+//       const missingNumber = mid + offset;
+  
+//       if (arr[mid] - mid === 2) {
+//         // Найдено 2 пропущенных числа, возвращаем их
+//         return [missingNumber, missingNumber + 1];
+//       } else {
+//         // Найдено только 1 пропущенное число, продолжаем поиск второго числа
+//         return [missingNumber].concat(findMissingNumbers(arr, mid + 1, high, offset + 1));
+//       }
+//     } else {
+//       return findMissingNumbers(arr, low, mid - 1, offset).concat(findMissingNumbers(arr, mid + 1, high, offset));
+//     }
+//   }
+  
+//   const sequence = [1, 4, 5, 6, 7, 8, 9, 10]; // Пример последовательности с пропущенными числами 2 и 3
+//   const missingNumbers = findMissingNumbers(sequence, 0, sequence.length - 1, 1);
+//   console.log(missingNumbers);
+  
+
