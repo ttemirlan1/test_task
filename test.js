@@ -38,7 +38,7 @@ function findMissingNumbers(arr, n, intervalSize = 10000) {
   
   const sequence = [1, 2, 3, 5, 6, 7, 8, 10]; // Пример последовательности с пропущенными числами 2 и 3
   const n = 10;
-  const missingNumbers = findMissingNumbers(arr, n);
+  const missingNumbers = findMissingNumbers(sequence, n);
   console.log(missingNumbers); // Выводит [2, 3]
   //time complexity is O(n) but faster than plain searching
 
